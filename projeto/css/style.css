@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(5, 5, 5, 0.877);
+    color: white;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0.09));
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.cabecalho img {
+    width: 90px;
+    border-radius: 100%;
+}
+
+/* NAVEGAÇÃO */
+.navegacao {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* BOTÃO MENU */
+.botao_menu {
+    background-color: rgba(240, 201, 201, 0.445);
+    color: black;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.botao_menu:hover {
+    background-color: rgb(206, 204, 204);
+    transform: scale(1.1);
+}
+
+/* MENU OCULTO */
+.menu_opcoes {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.menu_opcoes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_opcoes a li {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+    font-size: 20px;
+}
+
+.menu_opcoes li:hover {
+    background: #d1d0d0;
+}
+
+.menu_opcoes a {
+    text-decoration: none;
+    color: black;
+}
+
+/* SEÇÃO "BEM-VINDO" */
+.bemVindo {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 150px 50px 50px;
+    text-align: left;
+}
+
+.bemVindo h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 150px;
+    left: 80px;
+}
+
+.bemVindo p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-top: 50px;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.3);
+    }
+    50% {
+        transform: translateY(-20px);
+        box-shadow: 0px 20px 30px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.3);
+    }
+}
+
+.bemVindo .imagem-direita {
+    position: absolute;
+    right: 170px;
+    bottom: 170px;
+    width: 300px; /* Ajuste conforme necessário */
+    border-radius: 40%;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+/* ÍCONES ANIMADOS */
+.icone i {
+    position: absolute;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.2);
+    transition: transform 2s linear, top 3s linear, left 3s linear;
+}
+
+/* Animação aprimorada: Movimento aleatório em X e Y */
+@keyframes mover {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(30px, -40px) rotate(10deg); }
+    50% { transform: translate(-50px, 50px) rotate(-15deg); }
+    75% { transform: translate(60px, -30px) rotate(10deg); }
+    100% { transform: translate(-40px, 60px) rotate(-10deg); }
+}
+
+/* POSICIONAMENTO ALEATÓRIO DOS ÍCONES */
+.icone:nth-child(1) { top: 5%; left: 10%; animation-duration: 10s; }
+.icone:nth-child(2) { top: 20%; left: 70%; animation-duration: 14s; }
+.icone:nth-child(3) { top: 50%; left: 40%; animation-duration: 12s; }
+.icone:nth-child(4) { top: 80%; left: 80%; animation-duration: 16s; }
+
+@keyframes colorChange {
+    0% { color: white; }
+    50% { color: red; }
+    100% { color: white; }
+}
+
+/* Aplica a animação em cada letra */
+.animado {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.animado span {
+    display: inline-block;
+    animation: colorChange 1.5s infinite alternate;
+}
+
+/* Faz cada letra mudar de cor em momentos diferentes */
+.animado span:nth-child(1) { animation-delay: 0s; }
+.animado span:nth-child(2) { animation-delay: 0.2s; }
+.animado span:nth-child(3) { animation-delay: 0.4s; }
+.animado span:nth-child(4) { animation-delay: 0.6s; }
+.animado span:nth-child(5) { animation-delay: 0.8s; }
+.animado span:nth-child(6) { animation-delay: 1s; }
+.animado span:nth-child(7) { animation-delay: 1.2s; }
+
+
+/* About us */
+
+.sobre_mim {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    background-color: #111;
+    color: white;
+    gap: 40px; /* Espaço entre o texto e a imagem */
+    flex-wrap: wrap;
+}
+
+.sobre_mim .texto {
+    max-width: 50%;
+    flex: 1;
+}
+
+.sobre_mim h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.sobre_mim p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Ajuste da imagem para ficar ao lado do texto */
+.sobre_mim img {
+    width: 35%; /* Ocupa 35% da largura da seção */
+    max-width: 350px; /* Define um limite para não ficar grande demais */
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.3);
+    flex-shrink: 0;
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .sobre_mim {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre_mim .texto {
+        max-width: 80%;
+    }
+
+    .sobre_mim img {
+        width: 70%;
+        max-width: 250px;
+        margin-top: 20px;
+    }
+}
+
+
+/* carrossel */
+#meus-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(/projeto/assets/image/fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#meus-projetos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+  
+  h2 {
+    margin-top: 50px;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 80px;
+  }
+  
+  .splide {
+    max-width: 90%;  /* Ajustado para permitir slides maiores */
+    margin: 0 auto;  /* Centraliza corretamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;  /* Define um tamanho maior */
+    max-width: 100%;
+    transform: scale(0.85);
+    transition: transform 0.5s ease, width 0.3s ease;
+}
+
+  
+  .splide__slide.is-active {
+    transform: scale(1);
+  }
+  
+  .card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    margin-left: -100px;
+    
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    transform: scale(1.1);  /* Fica bem maior */
+    transition: transform 0.3s ease;
+    z-index: 10;  /* Evita que os outros slides fiquem por cima */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .card-content p {
+    margin-top: -20px;
+    color: rgb(54, 54, 54);
+    font-size: 1.2rem;
+  }
+
+  /* oque posso fazer */
+
+  .oque-posso-fazer {
+    position: relative;
+    text-align: center;
+    padding: 100px 10%;
+    background-color: #111;
+    color: white;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.oque-posso-fazer h2, 
+.oque-posso-fazer p, 
+.habilidades {
+    position: relative;
+    z-index: 1;
+}
+.oque-posso-fazer p {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.oque-posso-fazer h2 {
+    font-size: 40px;
+}
+.habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.habilidade {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.habilidade i {
+    font-size: 40px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.habilidade p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.habilidade:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+  
