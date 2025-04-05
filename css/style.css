@@ -286,6 +286,11 @@ body {
     z-index: -1;
 }
   
+.card-content{
+
+  font-size: 20px;
+
+}
   h2 {
     margin-top: 50px;
     color: white;
@@ -420,5 +425,240 @@ body {
 .habilidade:hover {
     transform: scale(1.1);
     background-color: rgba(255, 255, 255, 0.2);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(5, 5, 5, 0.877);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0.09));
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.cabecalho img {
+    width: 70px;
+    border-radius: 100%;
+}
+
+.navegacao {
+    position: relative;
+}
+
+.botao_menu {
+    background-color: rgba(240, 201, 201, 0.445);
+    color: black;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.botao_menu:hover {
+    background-color: rgb(206, 204, 204);
+    transform: scale(1.1);
+}
+
+/* MENU OCULTO */
+.menu_opcoes {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 180px;
+}
+
+.menu_opcoes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_opcoes a li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+    font-size: 18px;
+}
+
+.menu_opcoes li:hover {
+    background: #d1d0d0;
+}
+
+.menu_opcoes a {
+    text-decoration: none;
+    color: black;
+}
+
+/* SEÇÃO "BEM-VINDO" */
+.bemVindo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 120px 50px 50px;
+}
+
+.bemVindo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bemVindo p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.bemVindo .imagem-direita {
+    width: 250px;
+    border-radius: 40%;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+/* SOBRE MIM */
+.sobre_mim {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 5%;
+    background-color: #111;
+    gap: 40px;
+}
+
+.sobre_mim .texto {
+    max-width: 600px;
+    text-align: center;
+}
+
+.sobre_mim img {
+    width: 90%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.3);
+}
+/* Adicionando melhorias de responsividade */
+@media (max-width: 768px) {
+    .bemVindo {
+      padding: 40px 20px 20px;
+      text-align: center;
+      position: relative;
+      min-height: 60vh;
+    }
+  
+    .bemVindo h1 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+      position: relative;
+      top: -20px; /* empurra o h1 pra cima */
+    }
+  
+    .bemVindo p {
+      font-size: 1rem;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  
+    .bemVindo .imagem-direita {
+      position: static;
+      margin-top: 20px;
+      width: 200px;
+      border-radius: 50%;
+    }
+
+  
+    .sobre_mim {
+      padding: 60px 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sobre_mim img {
+      max-width: 250px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .sobre_mim .texto {
+      max-width: 100%;
+      font-size: 1rem;
+    }
+  
+    #meus-projetos h2 {
+      font-size: 1.6rem;
+      margin: 40px 0 40px;
+    }
+  
+    .splide__slide {
+      width: 90%;
+      margin-left: 0;
+      transform: scale(1);
+    }
+  
+    .card {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .card img {
+      height: 40vh;
+    }
+  
+    .oque-posso-fazer {
+      padding: 60px 20px;
+    }
+  
+    .oque-posso-fazer h2 {
+      font-size: 1.8rem;
+    }
+  
+    .oque-posso-fazer p {
+      font-size: 1rem;
+    }
+  
+    .habilidades {
+      gap: 20px;
+    }
+  
+    .habilidade {
+      width: 100px;
+      padding: 15px;
+    }
+  
+    .habilidade i {
+      font-size: 30px;
+    }
+  
+    .habilidade p {
+      font-size: 0.9rem;
+    }
 }
   

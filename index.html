@@ -25,10 +25,10 @@
                 <!-- Opções do menu -->
                 <div class="menu_opcoes" id="menu">
                     <ul>
-                        <a href=""><li>Sobre Mim</li></a>
-                        <a href=""><li>Trabalhos</li></a>
-                        <a href=""><li>O que posso fazer por você!</li></a>
-                        <a href=""><li>Contato</li></a>
+                        <a href="#sobreMim"><li>Sobre Mim</li></a>
+                        <a href="#Trabalhos"><li>Trabalhos</li></a>
+                        <a href="#fazer"><li>O que posso fazer por você!</li></a>
+                        <a href="#Contato"><li>Contato</li></a>
                 
                     </ul>
                 </div>
@@ -38,46 +38,47 @@
     
     <!-- SEÇÃO BEM-VINDO -->
     <section class="bemVindo">
+      <div class="texto-bemvindo">
         <h1 class="animado">Bem-vindo<b>!</b></h1>
-
         <p>
-            Olá! Sou um desenvolvedor Front-End apaixonado por transformar ideias em experiências digitais incríveis. Aqui você encontrará alguns dos meus projetos, onde aplico minhas habilidades em HTML, CSS, JavaScript e outras tecnologias modernas para criar interfaces interativas e responsivas.
-            Sinta-se à vontade para explorar meu trabalho e, se precisar de algo, estou à disposição! Vamos construir algo incrível juntos!
+          Olá! Sou um desenvolvedor Front-End apaixonado por transformar ideias em experiências digitais incríveis. Aqui você encontrará alguns dos meus projetos, onde aplico minhas habilidades em HTML, CSS, JavaScript e outras tecnologias modernas para criar interfaces interativas e responsivas.
+          Sinta-se à vontade para explorar meu trabalho e, se precisar de algo, estou à disposição! Vamos construir algo incrível juntos!
         </p>
-
-        <img src="./assets/image/robozin.png" alt="Imagem de Desenvolvedor" class="imagem-direita">
+      </div>
     
-        <!-- Ícones que se movem aleatoriamente -->
-         <div class="icone">
-            <i class="bi bi-filetype-html"></i>
-            <i class="bi bi-at"></i>
-            <i class="bi bi-backpack3"></i>
-            <i class="bi bi-balloon-fill"></i>
-            <i class="bi bi-bluetooth"></i>
-            <i class="bi bi-filetype-html"></i>
-            <i class="bi bi-at"></i>
-            <i class="bi bi-backpack3"></i>
-            <i class="bi bi-balloon-fill"></i>
-            <i class="bi bi-bluetooth"></i>
-        </div>
+      <div class="img-bemvindo">
+        <img src="./assets/image/robozin.png" alt="Imagem de Desenvolvedor" class="imagem-direita">
+      </div>
+    
+      <!-- Ícones que se movem aleatoriamente -->
+      <div class="icone">
+        <i class="bi bi-filetype-html"></i>
+        <i class="bi bi-at"></i>
+        <i class="bi bi-backpack3"></i>
+        <i class="bi bi-balloon-fill"></i>
+        <i class="bi bi-bluetooth"></i>
+        <i class="bi bi-filetype-html"></i>
+        <i class="bi bi-at"></i>
+        <i class="bi bi-backpack3"></i>
+        <i class="bi bi-balloon-fill"></i>
+        <i class="bi bi-bluetooth"></i>
+      </div>
     </section>
-
-    <section class="sobre_mim">
+    
+    <section class="sobre_mim" id="sobreMim">
         <div class="texto">
             <h2>Sobre Mim</h2>
             <p>
                 "A tecnologia sempre me fascinou, não apenas pelo que ela pode fazer, mas pelo impacto que causa na vida das pessoas. Como desenvolvedor front-end, minha missão vai além de escrever código; é sobre criar experiências digitais envolventes, intuitivas e acessíveis. Combinando criatividade e lógica, transformo ideias em interfaces funcionais e atraentes, garantindo que cada detalhe contribua para uma navegação fluida e impactante. Acredito que inovação e usabilidade devem caminhar juntas, proporcionando soluções que realmente fazem a diferença. Se você busca alguém apaixonado por desafios e comprometido com a excelência, estou pronto para construir algo incrível ao seu lado."
             </p>
-            <p>
-                "Desde pequeno, fui fascinado pelo mundo digital. A primeira vez que escrevi algumas linhas de código, percebi que a tecnologia poderia ser minha ferramenta para transformar ideias em realidade. Hoje, como desenvolvedor front-end, canalizo essa paixão para criar interfaces intuitivas, dinâmicas e acessíveis. Acredito que cada pixel conta e que o design deve ser tão funcional quanto bonito. Estou sempre em busca de inovação, aprendizado e desafios que me permitam crescer. Se você valoriza soluções criativas e impactantes, vamos juntos construir um futuro digital mais inspirador."
-            </p>
+            
         </div>
         <img src="./assets/image/Img_quemsoueu.png" alt="Minha imagem">
     </section>
-
+    <div id="Trabalhos"></div>
     <section id="meus-projetos">
         <h2>Meus Projetos</h2>
-        
+      
         <div class="splide" id="carrossel">
           <div class="splide__track">
             <ul class="splide__list">
@@ -113,7 +114,7 @@
         </div>
       </section>
 
-      <section class="oque-posso-fazer">
+      <section class="oque-posso-fazer" id="fazer">
         <!-- Div para o fundo de partículas -->
         <div id="particles-js"></div>
     
@@ -157,7 +158,8 @@
         </div>
     </section>
 
-    <section id="contato" class="bg-gray-950 text-white py-20 px-4">
+    <section id="contato" class="bg-gray-950 text-black py-20 px-4">
+      <div id="Contato"></div>
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
         <p class="mb-10 text-gray-400">Ficou interessado? Me mande uma mensagem!</p>
