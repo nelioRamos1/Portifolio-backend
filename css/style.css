@@ -7,6 +7,7 @@
 body {
     background-color: rgba(5, 5, 5, 0.877);
     color: white;
+    font-family: sans-serif;
 }
 
 /* CABEÇALHO */
@@ -256,111 +257,158 @@ body {
         margin-top: 20px;
     }
 }
-
-
-/* carrossel */
-#meus-projetos {
+#meus-projetos{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#meus-projetos h2 {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    background-image: url(/projeto/assets/image/fundo.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-size: 30px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+
+}
+.carousel-container {
+    perspective: 1200px;
     width: 100%;
-    min-height: 100vh;
+    max-width: 1100px;
+    margin: auto;
     position: relative;
-    z-index: 1;
-}
-
-#meus-projetos::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-  
-.card-content{
-
-  font-size: 20px;
-
-}
-  h2 {
-    margin-top: 50px;
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 80px;
-  }
-  
-  .splide {
-    max-width: 90%;  /* Ajustado para permitir slides maiores */
-    margin: 0 auto;  /* Centraliza corretamente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-  .splide__slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;  /* Define um tamanho maior */
-    max-width: 100%;
-    transform: scale(0.85);
-    transition: transform 0.5s ease, width 0.3s ease;
-}
-
-  
-  .splide__slide.is-active {
-    transform: scale(1);
-  }
-  
-  .card {
-    background: white;
-    border-radius: 15px;
+    height: 500px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    width: 300px;
-    margin-left: -100px;
-    
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    transform: scale(1.1);  /* Fica bem maior */
-    transition: transform 0.3s ease;
-    z-index: 10;  /* Evita que os outros slides fiquem por cima */
-  }
-  
-  .card img {
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.carousel img {
     width: 100%;
-    height: 60vh;
+    height: 400px;
     object-fit: cover;
     object-position: top;
-  }
-  
-  .card-content {
-    padding: 15px;
-  }
-  
-  .card-content h3 {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  
-  .card-content p {
-    margin-top: -20px;
-    color: rgb(54, 54, 54);
-    font-size: 1.2rem;
-  }
+    border-radius: 1rem;
+}
 
+.card {
+  position: absolute;
+  width: 340px;
+  height: 380px;
+  background: #e0e0e0;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  font-size: 5rem;
+  line-height: 360px;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: scale(0.8);
+  z-index: 0;
+}
+.card:hover {
+    cursor: pointer;
+    
+}
+
+.card.active {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg) scale(1);
+  z-index: 3;
+}
+
+.card.left {
+  opacity: 1;
+  transform: translateX(-340px) rotateY(30deg) scale(0.9);
+  z-index: 2;
+}
+
+.card.right {
+  opacity: 1;
+  transform: translateX(340px) rotateY(-30deg) scale(0.9);
+  z-index: 2;
+}
+
+/* Botões */
+.nav-btn {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: black;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.janela-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: #0c0b0bc4;
+    padding: 50px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.janela-modal.abrir {
+    display: flex;
+    opacity: 1;
+}
+
+.modal {
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.568);
+    backdrop-filter: blur(20px);
+    position: relative;
+    border-radius: 20px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.janela-modal.abrir .modal {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.fechar {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 0;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+}
   /* oque posso fazer */
 
   .oque-posso-fazer {
@@ -477,6 +525,29 @@ body {
     background-color: rgb(206, 204, 204);
     transform: scale(1.1);
 }
+
+.modal h1 {
+    font-size: 21px;
+    font-weight: bold;
+    color: #111; /* cor do título */
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222222de; /* cor do texto */
+    text-align: justify;
+    padding: 0 20px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 
 /* MENU OCULTO */
 .menu_opcoes {

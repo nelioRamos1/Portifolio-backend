@@ -78,40 +78,27 @@
     <div id="Trabalhos"></div>
     <section id="meus-projetos">
         <h2>Meus Projetos</h2>
-      
-        <div class="splide" id="carrossel">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <div class="card">
-                  <img src="./assets/image/Portifolio.png" alt="Projeto 1">
-                  <div class="card-content">
-                    <h3>Projeto 1</h3>
-                    <p>Um dos testes de portifolio pessoal.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="card">
-                  <img src="./assets/image/gallo.png" alt="Projeto 2">
-                  <div class="card-content">
-                    <h3>Projeto 2</h3>
-                    <p>projeto que fiz inspirado no local onde eu trabalhava.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="card">
-                  <img src="./assets/image/barber.png" alt="Projeto 3">
-                  <div class="card-content">
-                    <h3>Projeto 3</h3>
-                    <p>landpage feita para um barbeiro divulgar seus serviços</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+      <div class="carousel-container">
+        <button class="nav-btn prev"><i class="bi bi-arrow-left-circle"></i></button>
+
+        <div class="carousel">
+          <div onclick="abrirModal(this)" class="card" data-titulo="Projeto Distribuidora" data-texto="Este é um sistema que eu fiz quando trabalhava em uma empresa
+          apesar do projeto nao ter sido posto no ar, fiquei com ele pronto comigo">
+            <img src="./assets/image/gallo.png" alt=""></div>
+          <div onclick="abrirModal(this)" class="card"data-titulo="Projeto Barber" data-texto="Este é um projeto que fiz,primeiro projeto meu para externo, foi uma landpage
+          com foco em arrecadar mais clientes, assim promovendo o instagram e outros para um barbeiro da regiao">
+            <img src="./assets/image/barber.png" alt=""></div>
+          <div onclick="abrirModal(this)" class="card"data-titulo="Projeto cemtcomp" data-texto="Este é projeto que desenvolvi, o mais recente! um site completo com banco de dados em php/mysql
+          com cada aba separada e com uma aba de login e cadastro para aqueles que desejam fazer parte do projeto! tendo uma aba de pagamento e confirmação por email">
+            <img src="./assets/image/cemtcomp.png" alt=""></div>
+          <div onclick="abrirModal(this)" class="card"data-titulo="Projeto portifolio" data-texto="Este é um portifolio que fiz, como foi feito vendo um guia eu guardei como projeto
+          mas logo em seguida quis partir para fazer um por conta proprio">
+            <img src="./assets/image/Portifolio.png" alt=""></div>
         </div>
+        
+        <button class="nav-btn next"><i class="bi bi-arrow-right-circle"></i></button>
+      </div> 
+        
       </section>
 
       <section class="oque-posso-fazer" id="fazer">
@@ -195,11 +182,18 @@
             </button>
           </form>
         </section>
-
+        <div class="janela-modal" id="janela--modal">
+            <div class="modal">
+              <button class="fechar" id="fechar">X</button>
+              <h1>Janela modal</h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, obcaecati soluta. Neque pariatur quia provident debitis modi tenetur veniam eum, excepturi nobis molestiae iste commodi cum voluptatibus cupiditate ab laborum.</p>
+            </div>
+        </div>  
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/particles-config.js"></script>
     <script src="./js/contact.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/janela.js"></script>
 
 
 </body>
